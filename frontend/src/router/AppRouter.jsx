@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import DashboardLayout from "../components/layout/DashboardLayout";
 import Bookings from "../pages/Bookings";
 import Mechanics from "../pages/Mechanics";
@@ -10,22 +10,25 @@ const router = createBrowserRouter([
     element: <DashboardLayout />,
     children: [
       {
+        path: "/",
+        element: <Navigate to="/overview" replace />,
+      },
+      {
         path: "/overview",
         element: <Overview />,
       },
-       {
+      {
         path: "/bookings",
-        element: <Bookings/>,
+        element: <Bookings />,
       },
-       {
+      {
         path: "/mechanics",
-        element: <Mechanics/>,
+        element: <Mechanics />,
       },
       {
         path: "/analytics",
-        element: <Analytics/>,
+        element: <Analytics />,
       },
-     
     ],
   },
 ]);
