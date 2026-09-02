@@ -76,23 +76,10 @@ function Analytics() {
 
   if (error) {
     return (
-      <div
-        className={`min-h-screen p-6 ${isDark ? "bg-gray-950" : "bg-gray-50"
-          }`}
-      >
-        <div
-          className={`rounded-xl border p-5 text-center ${isDark
-              ? "border-red-900 bg-red-950/40"
-              : "border-red-100 bg-red-50"
-            }`}
-        >
-          <p
-            className={`font-medium ${isDark ? "text-red-400" : "text-red-600"
-              }`}
-          >
+      <div className={`min-h-screen p-6 flex-col ${isDark ? "bg-gray-950" : "bg-gray-50"}`}>
+          <p className= "justify-center items-center text-sm text-red-400">
             {error}
           </p>
-        </div>
       </div>
     );
   }

@@ -52,10 +52,7 @@ function Mechanics() {
 
   return (
     <div
-      className={`min-h-full p-6 ${isDark
-          ? "bg-gray-950 text-gray-100"
-          : "bg-gray-50 text-gray-900"
-        }`}
+      className={`min-h-full p-6 ${isDark ? "bg-gray-950 text-gray-100" : "bg-gray-50 text-gray-900" }`}
     >
       <div className="mb-6 flex items-center justify-between">
         <div>
@@ -63,10 +60,7 @@ function Mechanics() {
             Mechanics
           </h1>
 
-          <p
-            className={`mt-1 text-sm ${isDark ? "text-gray-400" : "text-gray-500"
-              }`}
-          >
+          <p className={`mt-1 text-sm ${isDark ? "text-gray-400" : "text-gray-500"}`}>
             Monitor mechanic availability and assignments.
           </p>
         </div>
@@ -86,10 +80,7 @@ function Mechanics() {
 
 
       <div
-        className={`overflow-x-auto rounded-xl border ${isDark
-            ? "border-gray-800 bg-gray-900"
-            : "border-gray-200 bg-white"
-          }`}
+        className={`overflow-x-auto rounded-xl border ${isDark ? "border-gray-800 bg-gray-900" : "border-gray-200 bg-white" }`}
       >
         {loading ? (
           <div className="flex min-h-80 items-center justify-center text-sm text-gray-500">
@@ -105,19 +96,12 @@ function Mechanics() {
           </div>
         ) : (
           <table className="w-full text-left text-sm">
-            <thead
-              className={`border-b ${isDark
-                  ? "border-gray-800 bg-gray-800/50"
-                  : "border-gray-200 bg-gray-50"
-                }`}
-            >
+            <thead className={`border-b ${isDark ? "border-gray-800 bg-gray-800/50" : "border-gray-200 bg-gray-50"}`}>
               <tr>
                 <th className="px-6 py-4">Mechanic Name</th>
                 <th className="px-6 py-4">Current Status</th>
                 <th className="px-6 py-4">Jobs Completed</th>
-                <th className="px-6 py-4">
-                  Current / Last Booking
-                </th>
+                <th className="px-6 py-4">Current / Last Booking</th>
               </tr>
             </thead>
 

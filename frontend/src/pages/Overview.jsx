@@ -143,11 +143,15 @@ function Overview() {
   if (error) {
     return (
       <div
-        className={`p-6 text-center text-sm ${
-          isDark ? "bg-gray-950 text-red-400" : "text-red-600"
+        className={`flex min-h-screen items-center justify-center p-6 ${
+          isDark ? "bg-gray-950" : "bg-gray-50"
         }`}
       >
-        {error}
+        <div
+          className = "text-red-400 text-sm"
+        >
+          {error}
+        </div>
       </div>
     );
   }
